@@ -66,8 +66,6 @@ div {
 #trash-can {
     position: fixed;
     cursor: grab;
-    top: 10px;
-    left: 10px;
-    border: 7px gray solid;
-    background-color: darkcyan;
+    bottom: 80px;
+    right: 20px;
 }

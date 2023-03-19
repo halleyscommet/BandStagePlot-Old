@@ -51,10 +51,10 @@
 
         <div class="modal">
             <div class="modal-content">
-                <h2>Welcome to Band Stage Plot</h2>
+                <h2>Welcome to Band Stage Plot!</h2>
                 <p>
                     This is where you can create your stage plot by dragging and dropping the elements to your desired location.<br>
-                    To duplicate items, double click on them. To get rid of items, drag and drop them into the trash can in the top left.<br>
+                    To duplicate items, double click on them. To get rid of items, drag and drop them into the trash can. These features are still a bit buggy!<br>
                     You can always come back to this page by clicking "☰" in the bottom right corner.
                 </p>
                 <button class="modal-okay" onclick="openModal()">Okay</button>
@@ -65,42 +65,42 @@
 
         <div>
             <div id="drum-draggable" style="cursor: move; position: relative;">
-                <img src="./Images/drums.png" width="125">
+                <img src="./Images/drums.png" width="150">
                 <h3 style="text-align: center; position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Drumset</h3>
             </div>        
             
             <div id="e-guitar-draggable" style="cursor: move; position: relative;">
-                <img src="./Images/electric-guitar.png" width="75">
+                <img src="./Images/electric-guitar.png" width="100">
                 <h4 style="text-align: center; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Electric Guitar</h4>
             </div>
 
             <div id="b-guitar-draggable" style="cursor: move; position: relative;">
-                <img src="./Images/bass-guitar.png" width="75">
+                <img src="./Images/bass-guitar.png" width="100">
                 <h4 style="text-align: center; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Guitar</h4>
             </div>
 
             <div id="microphone-stand-draggable" style="cursor: move; position: relative;">
-                <img src="./Images/microphone-stand.png" height="113">
+                <img src="./Images/microphone-stand.png" height="138">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Microphone Stand</h4>
             </div>
 
             <div id="singer-draggable" style="cursor: move; position: relative;">
-                <img src="./Images/singer.png" height="113">
+                <img src="./Images/singer.png" height="138">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Singer / Microphone</h4>
             </div>
             
             <div id="g-amp-draggable" style="cursor: move; position: relative;">
-                <img src="./Images/guitar-amp.png" width="75">
+                <img src="./Images/guitar-amp.png" width="100">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Guitar Amp</h4>
             </div>
 
             <div id="b-amp-draggable" style="cursor: move; position: relative;">
-                <img src="./Images/bass-amp.png" width="125">
+                <img src="./Images/bass-amp.png" width="150">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Amp</h4>
             </div>
 
             <div id="p-board-draggable" style="cursor: move; position: relative;">
-                <img src="./Images/pedal-board.png" width="65">
+                <img src="./Images/pedal-board.png" width="90">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Pedal Board</h4>
             </div>
         </div>
@@ -113,7 +113,7 @@
         <script src="./draggable.js"></script>
         <script src="./fs.js"></script>
 
-        <button id="reset-button" onclick="resetPosition()">Reset</button>
+        <button id="reset-button" onclick="resetPosition()">Reset Item Positions</button>
         <button id="fs-button" onclick="toggleFullscreen()">Fullscreen</button>
         <button id="modal-button" onclick="openModal()">☰</button>
 
