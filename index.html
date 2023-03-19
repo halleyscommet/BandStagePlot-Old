@@ -8,7 +8,8 @@
         <meta property="og:description" content="A website that allows you to easily make and share your stage plots" />
         <meta property="og:image" content="https://diymusician.cdbaby.com/wp-content/uploads/2011/07/Screen-shot-2011-07-15-at-1.08.32-PM2.png" />
 
-        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/items.css">
         <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
         
         <title>Band Stage Plot</title>
@@ -70,42 +71,42 @@
         <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 9999;"><center>Front</center></h1>
 
         <div>
-            <div id="drum-draggable" style="cursor: move; position: relative;">
+            <div id="drum-draggable">
                 <img src="./Images/drums.png" width="150">
                 <h3 style="text-align: center; position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Drumset</h3>
             </div>        
             
-            <div id="e-guitar-draggable" style="cursor: move; position: relative;">
+            <div id="e-guitar-draggable">
                 <img src="./Images/electric-guitar.png" width="100">
                 <h4 style="text-align: center; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Electric Guitar</h4>
             </div>
 
-            <div id="b-guitar-draggable" style="cursor: move; position: relative;">
+            <div id="b-guitar-draggable">
                 <img src="./Images/bass-guitar.png" width="100">
                 <h4 style="text-align: center; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Guitar</h4>
             </div>
 
-            <div id="microphone-stand-draggable" style="cursor: move; position: relative;">
+            <div id="microphone-stand-draggable">
                 <img src="./Images/microphone-stand.png" height="138">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Microphone Stand</h4>
             </div>
 
-            <div id="singer-draggable" style="cursor: move; position: relative;">
+            <div id="singer-draggable">
                 <img src="./Images/singer.png" height="138">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Singer / Microphone</h4>
             </div>
             
-            <div id="g-amp-draggable" style="cursor: move; position: relative;">
+            <div id="g-amp-draggable">
                 <img src="./Images/guitar-amp.png" width="100">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Guitar Amp</h4>
             </div>
 
-            <div id="b-amp-draggable" style="cursor: move; position: relative;">
+            <div id="b-amp-draggable">
                 <img src="./Images/bass-amp.png" width="150">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Amp</h4>
             </div>
 
-            <div id="p-board-draggable" style="cursor: move; position: relative;">
+            <div id="p-board-draggable">
                 <img src="./Images/pedal-board.png" width="90">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Pedal Board</h4>
             </div>
@@ -115,9 +116,9 @@
             <img src="./Images/trash-can.png" width="65">
         </div>          
 
-        <script src="./modal.js"></script>
-        <script src="./draggable.js"></script>
-        <script src="./fs.js"></script>
+        <script src="./JS/modal.js"></script>
+        <script src="./JS/draggable.js"></script>
+        <script src="./JS/fs.js"></script>
 
         <button id="reset-button" onclick="resetPosition()">Reset Item Positions</button>
         <button id="fs-button" onclick="toggleFullscreen()">Fullscreen</button>

@@ -1,0 +1,71 @@
+#drum-draggable {
+    cursor: move; 
+    position: relative;
+}
+
+#e-guitar-draggable {
+    cursor: move; 
+    position: relative;
+}
+
+#b-guitar-draggable {
+    cursor: move; 
+    position: relative;
+}
+
+#microphone-stand-draggable {
+    cursor: move; 
+    position: relative;
+}
+
+#singer-draggable {
+    cursor: move; 
+    position: relative;
+}
+
+#g-amp-draggable {
+    cursor: move; 
+    position: relative;
+}
+
+#b-amp-draggable {
+    cursor: move; 
+    position: relative;
+}
+
+#p-board-draggable {
+    cursor: move; 
+    position: relative;
+}
+
+#drum-draggable:active {
+    cursor: grabbing;
+}
+
+#e-guitar-draggable:active {
+    cursor: grabbing;
+}
+
+#b-guitar-draggable:active {
+    cursor: grabbing;
+}
+
+#microphone-stand-draggable:active {
+    cursor: grabbing;
+}
+
+#singer-draggable:active {
+    cursor: grabbing;
+}
+
+#g-amp-draggable:active {
+    cursor: grabbing;
+}
+
+#b-amp-draggable:active {
+    cursor: grabbing;
+}
+
+#p-board-draggable:active {
+    cursor: grabbing;
+}
