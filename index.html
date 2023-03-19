@@ -3,6 +3,7 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
         <meta property="og:title" content="Band Stage Plot" />
         <meta property="og:description" content="A website that allows you to easily make and share your stage plots" />
@@ -60,8 +61,8 @@
                 <h2>Welcome to Band Stage Plot!</h2>
                 <p>
                     This is where you can create your stage plot by dragging and dropping the elements to your desired location.<br>
-                    To duplicate items, double click on them. To get rid of items, drag and drop them into the trash can. These features are still a bit buggy!<br>
-                    You can always come back to this page by clicking "☰" in the bottom right corner.
+                    To duplicate items, double click on them. To get rid of items, drag and drop them into the trash can.<br>
+                    You can always come back to this page by clicking menu icon in the bottom right corner.
                 </p>
                 <h3 style="color: red;">Attention mobile users! This website does not work on any touchscreen devices. Please move to a desktop workstation to use this website.</h3>
                 <button class="modal-okay" onclick="openModal()" style="font-size: 27.5px;">Okay</button>
@@ -72,48 +73,48 @@
 
         <div>
             <div id="drum-draggable">
-                <img src="./Images/drums.png" width="150">
+                <img src="./Images/drums.png" width="150" crossorigin="anonymous">
                 <h3 style="text-align: center; position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Drumset</h3>
             </div>        
             
             <div id="e-guitar-draggable">
-                <img src="./Images/electric-guitar.png" width="100">
+                <img src="./Images/electric-guitar.png" width="100" crossorigin="anonymous">
                 <h4 style="text-align: center; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Electric Guitar</h4>
             </div>
 
             <div id="b-guitar-draggable">
-                <img src="./Images/bass-guitar.png" width="100">
+                <img src="./Images/bass-guitar.png" width="100" crossorigin="anonymous">
                 <h4 style="text-align: center; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Guitar</h4>
             </div>
 
             <div id="microphone-stand-draggable">
-                <img src="./Images/microphone-stand.png" height="138">
+                <img src="./Images/microphone-stand.png" height="138" crossorigin="anonymous">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Microphone Stand</h4>
             </div>
 
             <div id="singer-draggable">
-                <img src="./Images/singer.png" height="138">
+                <img src="./Images/singer.png" height="138" crossorigin="anonymous">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Singer / Microphone</h4>
             </div>
             
             <div id="g-amp-draggable">
-                <img src="./Images/guitar-amp.png" width="100">
+                <img src="./Images/guitar-amp.png" width="100" crossorigin="anonymous">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Guitar Amp</h4>
             </div>
 
             <div id="b-amp-draggable">
-                <img src="./Images/bass-amp.png" width="150">
+                <img src="./Images/bass-amp.png" width="150" crossorigin="anonymous">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Amp</h4>
             </div>
 
             <div id="p-board-draggable">
-                <img src="./Images/pedal-board.png" width="90">
+                <img src="./Images/pedal-board.png" width="90" crossorigin="anonymous">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Pedal Board</h4>
             </div>
         </div>
         
         <div id="trash-can" class="shake">
-            <img src="./Images/trash-can.png" width="65">
+            <img src="./Images/trash-can.png" width="65" crossorigin="anonymous">
         </div>          
 
         <script src="./JS/modal.js"></script>
@@ -122,7 +123,19 @@
 
         <button id="reset-button" onclick="resetPosition()">Reset Item Positions</button>
         <button id="fs-button" onclick="toggleFullscreen()">Fullscreen</button>
-        <button id="modal-button" onclick="openModal()">☰</button>
+        <button id="modal-button" onclick="openModal()"><img src="./Images/hamburger-menu.png" height="40"></button>
+        <button id="save-btn" onclick="capture()">Capture Screenshot</button>
+
+        <script>
+            function capture() {
+                html2canvas(document.body).then(function(canvas) {
+                    var link = document.createElement('a');
+                    link.download = 'stage.png';
+                    link.href = canvas.toDataURL();
+                    link.click();
+                });
+            }
+        </script>
 
     </body>
 </html>

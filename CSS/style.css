@@ -89,3 +89,22 @@ div {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 }
+
+
+#save-btn {
+    position: fixed;
+    top: 120px;
+    right: 10px;
+    background-color: #818181;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#save-btn:hover {
+    background-color: #3cae5d;
+}
