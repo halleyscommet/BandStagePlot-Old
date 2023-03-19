@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        
+        <title>Band Stage Plot</title>
+
+        <style>
+            /* Styling for the modal overlay */
+            .modal {
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(0, 0, 0, 0.5);
+              z-index: 9998;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              backdrop-filter: blur(10px);
+            }
+            
+            /* Styling for the modal content */
+            .modal-content {
+              background-color: white;
+              border-radius: 5px;
+              padding: 20px;
+              max-width: 500px;
+              text-align: center;
+            }
+            
+            /* Styling for the okay button */
+            .modal-okay {
+              background-color: #0077ff;
+              color: white;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              cursor: pointer;
+              font-size: 16px;
+              margin-top: 20px;
+            }
+        </style>       
+    </head>
+
+    <body style="background-color: lightgray;">
+
+        <div class="modal">
+            <div class="modal-content">
+                <h2>Welcome to Band Stage Plot</h2>
+                <p>
+                    This is where you can create your stage plot by dragging and dropping the elements to your desired location.<br>
+                    To duplicate items, double click on them. To get rid of items, drag and drop them into the trash can in the top left.<br>
+                    You can always come back to this page by clicking "☰" in the bottom right corner.
+                </p>
+                <button class="modal-okay" onclick="openModal()">Okay</button>
+            </div>
+        </div>
+        
+        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 9999;"><center>Front</center></h1>
+
+        <div>
+            <div id="drum-draggable" style="cursor: move; position: relative;">
+                <img src="./Images/drums.png" width="125">
+                <h3 style="text-align: center; position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Drumset</h3>
+            </div>        
+            
+            <div id="e-guitar-draggable" style="cursor: move; position: relative;">
+                <img src="./Images/electric-guitar.png" width="75">
+                <h4 style="text-align: center; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Electric Guitar</h4>
+            </div>
+
+            <div id="b-guitar-draggable" style="cursor: move; position: relative;">
+                <img src="./Images/bass-guitar.png" width="75">
+                <h4 style="text-align: center; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Guitar</h4>
+            </div>
+
+            <div id="microphone-stand-draggable" style="cursor: move; position: relative;">
+                <img src="./Images/microphone-stand.png" height="113">
+                <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Microphone Stand</h4>
+            </div>
+
+            <div id="singer-draggable" style="cursor: move; position: relative;">
+                <img src="./Images/singer.png" height="113">
+                <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Singer / Microphone</h4>
+            </div>
+            
+            <div id="g-amp-draggable" style="cursor: move; position: relative;">
+                <img src="./Images/guitar-amp.png" width="75">
+                <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Guitar Amp</h4>
+            </div>
+
+            <div id="b-amp-draggable" style="cursor: move; position: relative;">
+                <img src="./Images/bass-amp.png" width="125">
+                <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Amp</h4>
+            </div>
+
+            <div id="p-board-draggable" style="cursor: move; position: relative;">
+                <img src="./Images/pedal-board.png" width="65">
+                <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Pedal Board</h4>
+            </div>
+        </div>
+        
+        <div id="trash-can">
+            <img src="./Images/trash-can.png" width="65">
+        </div>          
+
+        <script src="./modal.js"></script>
+        <script src="./draggable.js"></script>
+        <script src="./fs.js"></script>
+
+        <button id="reset-button" onclick="resetPosition()">Reset</button>
+        <button id="fs-button" onclick="toggleFullscreen()">Fullscreen</button>
+        <button id="modal-button" onclick="openModal()">☰</button>
+
+    </body>
+</html>
