@@ -11,47 +11,11 @@
 
         <link rel="stylesheet" type="text/css" href="./CSS/style.css">
         <link rel="stylesheet" type="text/css" href="./CSS/items.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/ctxmenu.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/modal.css">
         <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
         
         <title>Band Stage Plot</title>
-
-        <style>
-            /* Styling for the modal overlay */
-            .modal {
-              position: fixed;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: rgba(0, 0, 0, 0.5);
-              z-index: 9998;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              backdrop-filter: blur(10px);
-            }
-            
-            /* Styling for the modal content */
-            .modal-content {
-              background-color: white;
-              border-radius: 5px;
-              padding: 20px;
-              max-width: 500px;
-              text-align: center;
-            }
-            
-            /* Styling for the okay button */
-            .modal-okay {
-              background-color: #0077ff;
-              color: white;
-              border: none;
-              padding: 10px 20px;
-              border-radius: 5px;
-              cursor: pointer;
-              font-size: 16px;
-              margin-top: 20px;
-            }
-        </style>
     </head>
 
     <body style="background-color: lightgray;">
@@ -70,7 +34,7 @@
             </div>
         </div>
         
-        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 9999;"><center>Front</center></h1>
+        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 9998;"><center>Front</center></h1>
 
         <div>
             <div id="drum-draggable">
@@ -116,27 +80,26 @@
         
         <div id="trash-can" class="shake">
             <img src="./Images/trash-can.png" width="65" crossorigin="anonymous">
-        </div>          
+        </div>
+        
+        <div id="contextMenu" class="context-menu" style="display: none; z-index: 9999;"> 
+            <ul class="menu"> 
+                <li class="share" onclick="copy()"><a href="#"><img src="./Images/copy-link.png" height="20">‎Copy Site Link</a></li> 
+                <li class="rename" onclick="capture()"><a href="#"><img src="./Images/screenshot.png" height="20">‎Screenshot</a></li>
+            </ul> 
+        </div>
 
         <script src="./JS/modal.js"></script>
         <script src="./JS/draggable.js"></script>
         <script src="./JS/fs.js"></script>
+        <script src="./JS/ctxmenu.js"></script>
+        <script src="./JS/screenshot.js"></script>
+        <script src="./JS/copylink.js"></script>
 
         <button id="reset-button" onclick="resetPosition()">Reset Item Positions</button>
         <button id="fs-button" onclick="toggleFullscreen()">Fullscreen</button>
         <button id="modal-button" onclick="openModal()"><img src="./Images/hamburger-menu.png" height="40"></button>
         <button id="save-btn" onclick="capture()">Capture Screenshot</button>
-
-        <script>
-            function capture() {
-                html2canvas(document.body).then(function(canvas) {
-                    var link = document.createElement('a');
-                    link.download = 'stage.png';
-                    link.href = canvas.toDataURL();
-                    link.click();
-                });
-            }
-        </script>
 
     </body>
 </html>
