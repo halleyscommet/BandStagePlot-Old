@@ -9,6 +9,7 @@ function addImage(){
             let imageContainer = document.getElementById("import-draggable");
             let newImage = document.createElement("img");
             newImage.setAttribute("src",reader.result);
+            newImage.setAttribute("width","250")
             imageContainer.appendChild(newImage);
         }
         reader.readAsDataURL(image);

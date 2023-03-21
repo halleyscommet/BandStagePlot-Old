@@ -43,39 +43,7 @@
     position: relative;
 }
 
-
-#drum-draggable:active {
-    cursor: grabbing;
-}
-
-#e-guitar-draggable:active {
-    cursor: grabbing;
-}
-
-#b-guitar-draggable:active {
-    cursor: grabbing;
-}
-
-#microphone-stand-draggable:active {
-    cursor: grabbing;
-}
-
-#singer-draggable:active {
-    cursor: grabbing;
-}
-
-#g-amp-draggable:active {
-    cursor: grabbing;
-}
-
-#b-amp-draggable:active {
-    cursor: grabbing;
-}
-
-#p-board-draggable:active {
-    cursor: grabbing;
-}
-
-#import-draggable:active {
-    cursor: grabbing;
+#piano-draggable {
+    cursor: move;
+    position: relative;
 }

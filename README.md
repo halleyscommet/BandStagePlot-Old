@@ -1,4 +1,4 @@
-# Welcome to BandStagePlot, a tool designed for bands and musicians to create professional-looking stage plots.
+# Welcome to BandStagePlot, a tool designed specifically for bands and musicians to create professional-looking stage plots.
 
 ### Features
 
@@ -12,10 +12,10 @@
 3. Save and share your stage plot with others.
 ### Support
 
-If you encounter any issues or have questions about using BandStagePlot, please contact me at `bandstageplot@gmail.com`.
+If you encounter any issues or have questions about using BandStagePlot, please contact me at `noah.likes.vr#5825` over Discord.
 ### Contributing
 
-I welcome contributions from the community! If you would like to contribute to BandStagePlot, please submit a pull request or reach out to me at `bandstageplot@gmail.com`.
+I welcome contributions from the community! If you would like to contribute to BandStagePlot, please submit a pull request or reach out to me at `noah.likes.vr#5825`.
 ### Credits
 
 BandStagePlot was developed by Noah Harper, with contributions from [ChatGPT](https://chat.openai.com/chat) (ha ha) and my dad. Thank you to everybody I consulted to get this working as best as possible.

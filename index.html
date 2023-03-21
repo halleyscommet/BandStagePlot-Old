@@ -1,7 +1,11 @@
 <!-- TODO: -->
 <!-- Create box maker tool -->
 <!-- Create line drawer tool -->
-<!-- Create text box tool -->
+<!-- Create text box tool or notes section -->
+<!-- More instruments -->
+<!-- Fix the duplication slide glitch -->
+<!-- Make objects scalable and rotatable -->
+<!--  -->
 
 
 <!DOCTYPE html>
@@ -71,6 +75,7 @@
                         importBtn.addEventListener('click', (e) => {
                             e.preventDefault();
                             addImage();
+                            closeModal();
                         });
                     </script>
                 </div>
@@ -88,46 +93,51 @@
         <div id="image-container">
             <div id="drum-draggable">
                 <img src="./Images/drums.png" width="150" crossorigin="anonymous">
-                <h3 style="text-align: center; position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Drumset</h3>
+                <h6 style="text-align: center; position: absolute; top: 75%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Drumset</6>
             </div>        
             
             <div id="e-guitar-draggable">
                 <img src="./Images/electric-guitar.png" width="100" crossorigin="anonymous">
-                <h4 style="text-align: center; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Electric Guitar</h4>
+                <h6 style="text-align: center; position: absolute; margin-top: 0%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Electric Guitar</h6>
             </div>
 
             <div id="b-guitar-draggable">
                 <img src="./Images/bass-guitar.png" width="100" crossorigin="anonymous">
-                <h4 style="text-align: center; position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Guitar</h4>
+                <h6 style="text-align: center; position: absolute; margin-top: -5%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Guitar</h6>
             </div>
 
             <div id="microphone-stand-draggable">
                 <img src="./Images/microphone-stand.png" height="138" crossorigin="anonymous">
-                <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Microphone Stand</h4>
+                <h6 style="text-align: center; position: absolute; top: 75%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Microphone Stand</6>
             </div>
 
             <div id="singer-draggable">
-                <img src="./Images/singer.png" height="138" crossorigin="anonymous">
-                <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Singer / Microphone</h4>
+                <img src="./Images/microphone.png" height="60" crossorigin="anonymous">
+                <h6 style="text-align: center; position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Mic</6>
             </div>
             
             <div id="g-amp-draggable">
                 <img src="./Images/guitar-amp.png" width="100" crossorigin="anonymous">
-                <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Guitar Amp</h4>
+                <h6 style="text-align: center; position: relative; margin-top: -13%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Guitar Amp</h6>
             </div>
 
             <div id="b-amp-draggable">
                 <img src="./Images/bass-amp.png" width="150" crossorigin="anonymous">
-                <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Amp</h4>
+                <h6 style="text-align: center; position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Bass Amp</h6>
             </div>
 
             <div id="p-board-draggable">
-                <img src="./Images/pedal-board.png" width="90" crossorigin="anonymous">
-                <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Pedal Board</h4>
+                <img src="./Images/pedal-board.png" width="50" crossorigin="anonymous">
+                <h6 style="text-align: center; position: relative; margin-top: 0%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Pedal Board</h6>
+            </div>
+
+            <div id="piano-draggable">
+                <img src="./Images/keyboard.png" width="110" crossorigin="anonymous">
+                <h6 style="text-align: center; position: relative; margin-top: -20%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Keyboard Piano</h6>
             </div>
 
             <div id="import-draggable">
-                <img width="25" crossorigin="anonymous">
+                <img crossorigin="anonymous">
             </div>
         </div>
         
