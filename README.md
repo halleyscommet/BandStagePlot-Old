@@ -1,4 +1,4 @@
-# Welcome to BandStagePlot, a tool designed specifically for bands and musicians to create professional-looking stage plots.
+# Welcome to BandStagePlot, a tool designed for bands and musicians to create professional-looking stage plots.
 
 ### Features
 
