@@ -12,10 +12,10 @@
 3. Save and share your stage plot with others.
 ### Support
 
-If you encounter any issues or have questions about using BandStagePlot, please contact me at `noah.likes.vr#5825` over Discord.
+If you encounter any issues or have questions about using BandStagePlot, please contact me at `bandstageplot@gmail.com`.
 ### Contributing
 
-I welcome contributions from the community! If you would like to contribute to BandStagePlot, please submit a pull request or reach out to me at `noah.likes.vr#5825`.
+I welcome contributions from the community! If you would like to contribute to BandStagePlot, please submit a pull request or reach out to me at `bandstageplot@gmail.com`.
 ### Credits
 
 BandStagePlot was developed by Noah Harper, with contributions from [ChatGPT](https://chat.openai.com/chat) (ha ha) and my dad. Thank you to everybody I consulted to get this working as best as possible.
