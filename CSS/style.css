@@ -108,3 +108,11 @@ div {
 #save-btn:hover {
     background-color: #3cae5d;
 }
+
+
+.line {
+    position: absolute;
+    background-color: black;
+    width: 1px;
+    height: 1px;
+}

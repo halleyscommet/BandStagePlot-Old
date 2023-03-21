@@ -1,14 +1,25 @@
+<!-- TODO: -->
+<!-- Create box maker tool -->
+<!-- Create line drawer tool -->
+<!-- Create text box tool -->
+
+
 <!DOCTYPE html>
 <html>
+
+    <!-- Start processes -->
     <head>
+        <!-- Import scripts -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
         <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
+        <!-- Create embed thingamajig -->
         <meta property="og:title" content="Band Stage Plot" />
         <meta property="og:description" content="A website that allows you to easily make and share your stage plots" />
         <meta property="og:image" content="https://diymusician.cdbaby.com/wp-content/uploads/2011/07/Screen-shot-2011-07-15-at-1.08.32-PM2.png" />
 
+        <!-- Import styles -->
         <link rel="stylesheet" type="text/css" href="./CSS/style.css">
         <link rel="stylesheet" type="text/css" href="./CSS/items.css">
         <link rel="stylesheet" type="text/css" href="./CSS/ctxmenu.css">
@@ -20,23 +31,61 @@
 
     <body style="background-color: lightgray;">
 
+        <!-- Version -->
+        <h6 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; position:sticky;">
+            Version 0.1.0.4
+        </h6>
+
+        <!-- Modal Content -->
         <div class="modal">
             <div class="modal-content">
                 <h2>Welcome to Band Stage Plot!</h2>
-                <p>
+                <h4>
                     This is where you can create your stage plot by dragging and dropping the elements to your desired location.<br>
-                    To duplicate items, double click on them. To get rid of items, drag and drop them into the trash can.<br>
-                    You can also use the button that says "Capture Screenshot" to save an image of your stage to your computer!<br>
-                    You can always come back to this page by clicking menu icon in the bottom right corner.
-                </p>
+                    To get rid of items, drag and drop them into the trash can.<br>
+                    You can always come back to this page by clicking menu icon in the bottom right corner.<br>
+                    All code is on <a href="https://github.com/noahlikesvr/BandStagePlot" target="_blank">GitHub</a>.
+                </h4>
                 <h3 style="color: red;">Attention mobile users! This website does not work on any touchscreen devices. Please move to a desktop workstation to use this website.</h3>
                 <button class="modal-okay" onclick="openModal()" style="font-size: 27.5px;">Okay</button>
             </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="modal-content">
+                <h2>Controls and Button Functions</h2>
+                <h4>
+                    Duplicating Items - Double click<br>
+                    Context Menu (Share, Screenshot, Fullscreen) - Right click<br>
+                    Reset Button - Resets the positions of all items<br>
+                    Fullscreen Button - Fullscreens the page<br>
+                    Screenshot Button - Saves an image of the page to your device
+                </h4>
+                <br>
+                <div>
+                    <h2>Upload Your Own Image</h2>
+                    <form id="input-form">
+                        <input type="file" accept="image/png" id="browse"><br>
+                        <button type="submit" id="add-image">Add Image (1/session)</button>
+                    </form>
+                    <script>
+                        let importBtn = document.querySelector('#add-image');
+                        importBtn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            addImage();
+                        });
+                    </script>
+                </div>
+            </div>
         </div>
         
-        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 9998;"><center>Front</center></h1>
+        <!-- Front -->
+        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 9998; position: unset;">
+            <center>
+                Front
+            </center>
+        </h1>
 
-        <div>
+        <!-- Images -->
+        <div id="image-container">
             <div id="drum-draggable">
                 <img src="./Images/drums.png" width="150" crossorigin="anonymous">
                 <h3 style="text-align: center; position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Drumset</h3>
@@ -76,30 +125,40 @@
                 <img src="./Images/pedal-board.png" width="90" crossorigin="anonymous">
                 <h4 style="text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: rgb(255, 255, 255); background-color: black;">Pedal Board</h4>
             </div>
+
+            <div id="import-draggable">
+                <img width="25" crossorigin="anonymous">
+            </div>
         </div>
         
+        <!-- Trash can -->
         <div id="trash-can" class="shake">
             <img src="./Images/trash-can.png" width="65" crossorigin="anonymous">
         </div>
         
+        <!-- CTX menu -->
         <div id="contextMenu" class="context-menu" style="display: none; z-index: 9999;"> 
             <ul class="menu"> 
                 <li class="share" onclick="copy()"><a href="#"><img src="./Images/copy-link.png" height="20">&nbsp;&nbsp;&nbsp;Copy Site Link</a></li> 
-                <li class="rename" onclick="capture()"><a href="#"><img src="./Images/screenshot.png" height="20">&nbsp;&nbsp;&nbsp;Screenshot</a></li>
+                <li class="screenshot" onclick="capture()"><a href="#"><img src="./Images/screenshot.png" height="20">&nbsp;&nbsp;&nbsp;Screenshot</a></li>
+                <li class="fullscreen" onclick="toggleFullscreen()"><a href="#"><img src="./Images/fullscreen.png" height="20">&nbsp;&nbsp;&nbsp;Toggle Fullscreen</a></li>
             </ul> 
         </div>
 
+        <!-- Import scripts -->
         <script src="./JS/modal.js"></script>
         <script src="./JS/draggable.js"></script>
         <script src="./JS/fs.js"></script>
         <script src="./JS/ctxmenu.js"></script>
         <script src="./JS/screenshot.js"></script>
         <script src="./JS/copylink.js"></script>
+        <script src="./JS/import.js"></script>
 
+        <!-- Add Buttons -->
         <button id="reset-button" onclick="resetPosition()">Reset Item Positions</button>
         <button id="fs-button" onclick="toggleFullscreen()">Fullscreen</button>
+        <button id="save-btn" onclick="capture()">Screenshot</button>
         <button id="modal-button" onclick="openModal()"><img src="./Images/hamburger-menu.png" height="40"></button>
-        <button id="save-btn" onclick="capture()">Capture Screenshot</button>
 
     </body>
 </html>

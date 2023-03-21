@@ -38,6 +38,12 @@
     position: relative;
 }
 
+#import-draggable {
+    cursor: move; 
+    position: relative;
+}
+
+
 #drum-draggable:active {
     cursor: grabbing;
 }
@@ -67,5 +73,9 @@
 }
 
 #p-board-draggable:active {
+    cursor: grabbing;
+}
+
+#import-draggable:active {
     cursor: grabbing;
 }
