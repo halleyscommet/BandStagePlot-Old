@@ -52,3 +52,8 @@
     cursor: move;
     position: relative;
 }
+
+#person-draggable {
+    cursor: move;
+    position: relative;
+}
