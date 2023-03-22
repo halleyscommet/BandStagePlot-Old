@@ -47,3 +47,8 @@
     cursor: move;
     position: relative;
 }
+
+#stage-monitor-draggable {
+    cursor: move;
+    position: relative;
+}
