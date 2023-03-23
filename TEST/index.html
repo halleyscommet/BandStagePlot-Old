@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login or Sign Up</title>
+    </head>
+    <body>
+        <form>
+            <p>input code here</p>
+            <input type="text"><button type="submit">submit</button>
+            <button type="button">new code</button>
+        </form>
+        <script>
+            document.querySelector('form').addEventListener('submit', function(ev) {
+                ev.preventDefault();
+                let code = document.querySelector('input').value;
+                let validCodes = [];
+        
+                fetch('validcodes.txt')
+                    .then(response => response.text())
+                    .then(text => {
+                        validCodes = text.split('\n');
+                        if (validCodes.includes(code)) {
+                            document.location.href = './absnsudjfjfdksdfg001nm12-jasdfasdf.html'
+                        } else {
+                            alert('Invalid code!');
+                        }
+                    });
+            });
+        </script>
+    </body>
+</html>

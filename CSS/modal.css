@@ -73,3 +73,30 @@
 #add-image:hover {
     background-color: #3cae5d;
 }
+
+
+#import-file {
+    color: black;
+    background-color: #818181;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#import-file:hover {
+    background-color: #3cae5d;
+}
+
+#import-button {
+    color: black;
+    background-color: #818181;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#import-button:hover {
+    background-color: #3cae5d;
+}

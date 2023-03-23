@@ -57,3 +57,7 @@
     cursor: move;
     position: relative;
 }
+
+#text-box {
+    position: relative;
+}
