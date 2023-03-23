@@ -56,9 +56,6 @@ function exportAsJSON() {
   link.click();
 }
 
-// Bind the export and import functions to buttons or links
-$("#export-button").on("click", exportAsJSON);
-
 // Function to import a JSON file and update the page
 function importJSON() {
   // Get the file from the input element

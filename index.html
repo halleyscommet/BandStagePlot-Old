@@ -18,21 +18,6 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
         <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-        <script>
-            function allowDrop(ev) {
-                ev.preventDefault();
-            }
-            
-            function drag(ev) {
-                ev.dataTransfer.setData("text", ev.target.id);
-            }
-            
-            function drop(ev) {
-                ev.preventDefault();
-                var data = ev.dataTransfer.getData("text");
-                ev.target.appendChild(document.getElementById(data));
-            }
-        </script>
 
         <!-- Create embed thingamajig -->
         <meta property="og:title" content="Band Stage Plot" />
@@ -53,7 +38,7 @@
 
         <!-- Version -->
         <h6 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; position:relative; margin-top: 10px; margin-left: 10px;">
-            Version 1.0.4.2
+            Version 1.0.5
         </h6>
 
         <!-- Header Text Box -->
@@ -74,6 +59,7 @@
                 </h4>
                 <h3 style="color: red;">Attention mobile users! This website does not work on any touchscreen devices. Please move to a desktop workstation to use this website.</h3>
                 <button class="modal-okay" onclick="openModal()" style="font-size: 27.5px;">Okay</button>
+                <center><h6 style="position: relative;"><a href="./about.html">More about BandStagePlot</a></h6></center>
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <div class="modal-content">
