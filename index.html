@@ -4,7 +4,6 @@
 <!-- Create text box tool or notes section -->
 <!-- More instruments-->
 <!-- Fix the duplication slide glitch -->
-<!-- Fix double JSON save glitch -->
 <!-- Make objects scalable and rotatable -->
 <!-- Make verification and code system -->
 <!-- Make movable with arrow keys -->
@@ -30,6 +29,8 @@
         <link rel="stylesheet" type="text/css" href="./CSS/items.css">
         <link rel="stylesheet" type="text/css" href="./CSS/ctxmenu.css">
         <link rel="stylesheet" type="text/css" href="./CSS/modal.css">
+
+        <!-- Import favicon -->
         <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
         
         <title>Band Stage Plot</title>
@@ -60,7 +61,7 @@
                 </h4>
                 <h3 style="color: red;">Attention mobile users! This website does not work on any touchscreen devices. Please move to a desktop workstation to use this website.</h3>
                 <button class="modal-okay" onclick="openModal()" style="font-size: 27.5px;">Okay</button>
-                <center><h6 style="position: relative;"><a href="./about.html">More about BandStagePlot</a></h6></center>
+                <center><h6 style="position: relative;"><a href="./about">More about BandStagePlot</a></h6></center>
             </div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <div class="modal-content">
@@ -88,9 +89,9 @@
                         });
                     </script>
 
-                    <h2>Export or Import</h2>
+                    <h2>Import or Export File</h2>
                     <form id="input-form">
-                        <button id="export-button" type="button" onclick="exportAsJSON()">Export</button><br>
+                        <button id="export-button" type="button" onclick="exportAsJSON(), closeModel()">Export</button><br>
                         <input id="import-file" type="file" accept=".json"><br>
                         <button id="import-button" type="button" onclick="importJSON()">Import</button>
                     </form>
