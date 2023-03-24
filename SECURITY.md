@@ -11,5 +11,5 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Please email me at [bandstageplot@gmail.com](mailto: bandstageplot@gmail.com) if you find a security issue or vulnerability!
+Please email me at bandstageplot@gmail.com if you find a security issue or vulnerability!
 I need to know if something happens so I can fix it.
